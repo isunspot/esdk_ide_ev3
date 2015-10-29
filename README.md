@@ -1,2 +1,13 @@
 # esdk_ide_ev3
-乐高互动机器人源码
+项目简介：
+
+1 com.huawei.ecosystem.interaction和com.huawei.ecosystem.interaction.feature为Eclipse侧插件工程，运行在Eclipse上，和esdk_hdc_interaction_server交互；通过Restful接口向esdk_hdc_interaction_server发送消息通知任务是否做成功 
+
+2 esdk_hdc_interaction_server工程，提供Restful接口服务；接受Eclipse插件的调用；通过Socket和运行在EV3上的服务端程序esdk_hdc_ev3_robot交互 
+
+3 esdk_hdc_ev3_robot工程，运行在EV3上，提供Socket服务 
+
+4 esdk_hdc_ev3_lib工程，库工程，esdk_hdc_interaction_server，esdk_hdc_ev3_robot和esdk_hdc_ev3_mobile_control会依赖它 
+
+5 esdk_hdc_ev3_mobile_control工程，Android手机端工程，通过Socket连接运行在EV3上的esdk_hdc_ev3_robot服务端程序交互，用来控制EV3机器人 
+
