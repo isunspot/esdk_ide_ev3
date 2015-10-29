@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Interaction
+Bundle-SymbolicName: com.huawei.ecosystem.interaction;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.huawei.ecosystem.interaction.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.expressions,
+ org.eclipse.jface.text
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .

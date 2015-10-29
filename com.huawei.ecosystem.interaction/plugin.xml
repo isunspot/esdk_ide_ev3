@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="eSDK Interaction Category"
+            id="com.huawei.ecosystem.interaction.commands.category">
+      </category>
+      <command
+            categoryId="com.huawei.ecosystem.interaction.commands.category"
+            defaultHandler="com.huawei.ecosystem.interaction.handlers.SuccessHandler"
+            id="com.huawei.ecosystem.interaction.commands.success"
+            name="Success">
+      </command>
+      <command
+            categoryId="com.huawei.ecosystem.interaction.commands.category"
+            defaultHandler="com.huawei.ecosystem.interaction.handlers.FailHandler"
+            id="com.huawei.ecosystem.interaction.commands.fail"
+            name="Fail">
+      </command>
+   </extension>
+  
+          
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.huawei.ecosystem.interaction.preference.InteractionPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="eSDKToolkitId"
+            class="com.huawei.ecosystem.interaction.preference.InteractionPreferencePage"
+            id="com.huawei.ecosystem.interaction.page"
+            name="Interaction">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.huawei.ecosystem.interaction.commands.success"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+M3+0">
+      </key>
+      <key
+            commandId="com.huawei.ecosystem.interaction.commands.fail"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+M3+9">
+      </key>
+   </extension>
+
+</plugin>
